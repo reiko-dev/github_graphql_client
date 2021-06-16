@@ -1,0 +1,7 @@
+analyzer:
+  exclude:
+    # ignore warnings in files from json_serializable, built_value and most generators
+    - "**/*.g.dart"
+    
+    - "**/*.gql.dart"
+    
