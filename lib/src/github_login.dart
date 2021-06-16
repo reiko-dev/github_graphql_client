@@ -49,7 +49,8 @@ class _GithubLoginState extends State<GithubLoginWidget> {
             // Bind to an ephemeral port on localhost
             _redirectServer = await HttpServer.bind('localhost', 0);
             var authenticatedHttpClient = await _getOAuth2Client(
-                Uri.parse('http://localhost:${_redirectServer!.port}/auth'));
+              Uri.parse('http://localhost:${_redirectServer!.port}/auth'),
+            );
             setState(() {
               _client = authenticatedHttpClient;
             });
