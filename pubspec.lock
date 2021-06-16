@@ -360,7 +360,7 @@ packages:
     source: hosted
     version: "1.8.0"
   pedantic:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: pedantic
       url: "https://pub.dartlang.org"
@@ -560,6 +560,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  window_to_front:
+    dependency: "direct main"
+    description:
+      path: "../window_to_front"
+      relative: true
+    source: path
+    version: "0.0.1"
   yaml:
     dependency: transitive
     description:
