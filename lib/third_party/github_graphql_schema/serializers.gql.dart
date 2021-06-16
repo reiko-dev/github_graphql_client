@@ -2,11 +2,44 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart' show StandardJsonPlugin;
 import 'package:github_graphql_client/src/github_gql/github_queries.data.gql.dart'
-    show GViewerDetailData, GViewerDetailData_viewer;
+    show
+        GAssignedIssuesData_search_edges_node,
+        GAssignedIssuesData,
+        GAssignedIssuesData_search,
+        GAssignedIssuesData_search_edges,
+        GAssignedIssuesData_search_edges_node__asIssue,
+        GAssignedIssuesData_search_edges_node__asIssue_author,
+        GAssignedIssuesData_search_edges_node__asIssue_comments,
+        GAssignedIssuesData_search_edges_node__asIssue_labels,
+        GAssignedIssuesData_search_edges_node__asIssue_labels_nodes,
+        GAssignedIssuesData_search_edges_node__asIssue_repository,
+        GAssignedIssuesData_search_edges_node__base,
+        GPullRequestsData,
+        GPullRequestsData_viewer,
+        GPullRequestsData_viewer_pullRequests,
+        GPullRequestsData_viewer_pullRequests_edges,
+        GPullRequestsData_viewer_pullRequests_edges_node,
+        GPullRequestsData_viewer_pullRequests_edges_node_author,
+        GPullRequestsData_viewer_pullRequests_edges_node_comments,
+        GPullRequestsData_viewer_pullRequests_edges_node_files,
+        GPullRequestsData_viewer_pullRequests_edges_node_repository,
+        GRepositoriesData,
+        GRepositoriesData_viewer,
+        GRepositoriesData_viewer_repositories,
+        GRepositoriesData_viewer_repositories_nodes,
+        GRepositoriesData_viewer_repositories_nodes_issues,
+        GRepositoriesData_viewer_repositories_nodes_owner,
+        GRepositoriesData_viewer_repositories_nodes_stargazers,
+        GViewerDetailData,
+        GViewerDetailData_viewer;
 import 'package:github_graphql_client/src/github_gql/github_queries.req.gql.dart'
-    show GViewerDetail;
+    show GAssignedIssues, GPullRequests, GRepositories, GViewerDetail;
 import 'package:github_graphql_client/src/github_gql/github_queries.var.gql.dart'
-    show GViewerDetailVars;
+    show
+        GAssignedIssuesVars,
+        GPullRequestsVars,
+        GRepositoriesVars,
+        GViewerDetailVars;
 import 'package:github_graphql_client/third_party/github_graphql_schema/schema.docs.schema.gql.dart'
     show
         GAcceptEnterpriseAdministratorInvitationInput,
@@ -386,6 +419,7 @@ import 'package:github_graphql_client/third_party/github_graphql_schema/schema.d
         GVerifiableDomainOrderField,
         GVerifyVerifiableDomainInput,
         GX509Certificate;
+// ignore: implementation_imports
 import 'package:gql_code_builder/src/serializers/operation_serializer.dart'
     show OperationSerializer;
 
@@ -393,6 +427,7 @@ part 'serializers.gql.g.dart';
 
 final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   ..add(OperationSerializer())
+  ..add(GAssignedIssuesData_search_edges_node.serializer)
   ..addPlugin(StandardJsonPlugin());
 @SerializersFor([
   GAcceptEnterpriseAdministratorInvitationInput,
@@ -414,6 +449,18 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GApproveDeploymentsInput,
   GApproveVerifiableDomainInput,
   GArchiveRepositoryInput,
+  GAssignedIssues,
+  GAssignedIssuesData,
+  GAssignedIssuesData_search,
+  GAssignedIssuesData_search_edges,
+  GAssignedIssuesData_search_edges_node__asIssue,
+  GAssignedIssuesData_search_edges_node__asIssue_author,
+  GAssignedIssuesData_search_edges_node__asIssue_comments,
+  GAssignedIssuesData_search_edges_node__asIssue_labels,
+  GAssignedIssuesData_search_edges_node__asIssue_labels_nodes,
+  GAssignedIssuesData_search_edges_node__asIssue_repository,
+  GAssignedIssuesData_search_edges_node__base,
+  GAssignedIssuesVars,
   GAuditLogOrder,
   GAuditLogOrderField,
   GCancelEnterpriseAdminInvitationInput,
@@ -617,6 +664,17 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GPullRequestState,
   GPullRequestTimelineItemsItemType,
   GPullRequestUpdateState,
+  GPullRequests,
+  GPullRequestsData,
+  GPullRequestsData_viewer,
+  GPullRequestsData_viewer_pullRequests,
+  GPullRequestsData_viewer_pullRequests_edges,
+  GPullRequestsData_viewer_pullRequests_edges_node,
+  GPullRequestsData_viewer_pullRequests_edges_node_author,
+  GPullRequestsData_viewer_pullRequests_edges_node_comments,
+  GPullRequestsData_viewer_pullRequests_edges_node_files,
+  GPullRequestsData_viewer_pullRequests_edges_node_repository,
+  GPullRequestsVars,
   GReactionContent,
   GReactionOrder,
   GReactionOrderField,
@@ -648,6 +706,15 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GRepoDestroyAuditEntryVisibility,
   GRepoRemoveMemberAuditEntryVisibility,
   GReportedContentClassifiers,
+  GRepositories,
+  GRepositoriesData,
+  GRepositoriesData_viewer,
+  GRepositoriesData_viewer_repositories,
+  GRepositoriesData_viewer_repositories_nodes,
+  GRepositoriesData_viewer_repositories_nodes_issues,
+  GRepositoriesData_viewer_repositories_nodes_owner,
+  GRepositoriesData_viewer_repositories_nodes_stargazers,
+  GRepositoriesVars,
   GRepositoryAffiliation,
   GRepositoryContributionType,
   GRepositoryInteractionLimit,

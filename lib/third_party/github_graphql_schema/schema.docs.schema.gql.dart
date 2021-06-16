@@ -1,5 +1,9 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: implementation_imports
+// ignore_for_file: camel_case_types
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';

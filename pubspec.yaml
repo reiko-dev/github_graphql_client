@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  fluttericon: ^2.0.0
   gql: ^0.13.0
   gql_exec: ^0.3.0
   gql_link: ^0.4.0

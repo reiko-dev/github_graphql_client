@@ -31,3 +31,64 @@ abstract class GViewerDetail
   static GViewerDetail? fromJson(Map<String, dynamic> json) =>
       _i4.serializers.deserializeWith(GViewerDetail.serializer, json);
 }
+
+abstract class GPullRequests
+    implements Built<GPullRequests, GPullRequestsBuilder> {
+  GPullRequests._();
+
+  factory GPullRequests([Function(GPullRequestsBuilder b) updates]) =
+      _$GPullRequests;
+
+  static void _initializeBuilder(GPullRequestsBuilder b) => b
+    ..operation =
+        _i1.Operation(document: _i2.document, operationName: 'PullRequests');
+  _i3.GPullRequestsVars get vars;
+  _i1.Operation get operation;
+  static Serializer<GPullRequests> get serializer => _$gPullRequestsSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i4.serializers.serializeWith(GPullRequests.serializer, this)
+          as Map<String, dynamic>);
+  static GPullRequests? fromJson(Map<String, dynamic> json) =>
+      _i4.serializers.deserializeWith(GPullRequests.serializer, json);
+}
+
+abstract class GAssignedIssues
+    implements Built<GAssignedIssues, GAssignedIssuesBuilder> {
+  GAssignedIssues._();
+
+  factory GAssignedIssues([Function(GAssignedIssuesBuilder b) updates]) =
+      _$GAssignedIssues;
+
+  static void _initializeBuilder(GAssignedIssuesBuilder b) => b
+    ..operation =
+        _i1.Operation(document: _i2.document, operationName: 'AssignedIssues');
+  _i3.GAssignedIssuesVars get vars;
+  _i1.Operation get operation;
+  static Serializer<GAssignedIssues> get serializer =>
+      _$gAssignedIssuesSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i4.serializers.serializeWith(GAssignedIssues.serializer, this)
+          as Map<String, dynamic>);
+  static GAssignedIssues? fromJson(Map<String, dynamic> json) =>
+      _i4.serializers.deserializeWith(GAssignedIssues.serializer, json);
+}
+
+abstract class GRepositories
+    implements Built<GRepositories, GRepositoriesBuilder> {
+  GRepositories._();
+
+  factory GRepositories([Function(GRepositoriesBuilder b) updates]) =
+      _$GRepositories;
+
+  static void _initializeBuilder(GRepositoriesBuilder b) => b
+    ..operation =
+        _i1.Operation(document: _i2.document, operationName: 'Repositories');
+  _i3.GRepositoriesVars get vars;
+  _i1.Operation get operation;
+  static Serializer<GRepositories> get serializer => _$gRepositoriesSerializer;
+  Map<String, dynamic> toJson() =>
+      (_i4.serializers.serializeWith(GRepositories.serializer, this)
+          as Map<String, dynamic>);
+  static GRepositories? fromJson(Map<String, dynamic> json) =>
+      _i4.serializers.deserializeWith(GRepositories.serializer, json);
+}
