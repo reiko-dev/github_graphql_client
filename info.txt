@@ -1,0 +1,2 @@
+Register a GitHub OAuth application
+To build a desktop application that uses GitHub's APIs, first you need to authenticate. There are multiple options available, but the best user experience is to direct the user through GitHub's OAuth2 login flow in their browser. This enables handling of two-factor authentication and effortless integration of password managers.
